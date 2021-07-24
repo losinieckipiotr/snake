@@ -1,0 +1,2 @@
+
+export { MySquare } from './MySquare'
