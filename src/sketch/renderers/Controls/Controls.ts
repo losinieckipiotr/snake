@@ -15,17 +15,8 @@ export function Controls (p: p, { store }: ControlsParams): Renderer {
   iterationSpan.addClass('msg')
   iterationSpan.parent(messagesParagraph)
 
-  const simulationRateSpan = p.createSpan()
-  simulationRateSpan.id('simulationRateSpan')
-  simulationRateSpan.addClass('msg')
-  simulationRateSpan.parent(messagesParagraph)
-
   autorun(() => {
     iterationSpan.html(`Iteration: ${store.iteration}`)
-  })
-
-  autorun(() => {
-    simulationRateSpan.html(`Simulation rate: ${store.simulationRate}`)
   })
 
   return () => {}
